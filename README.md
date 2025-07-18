@@ -30,12 +30,17 @@ To use this library, your MCU's SPI peripheral must be configured with the follo
 TM7711:
 
 * **Data Size:** 8 bits
-* **First Bit:** MSB
+* **First Bit:** MSB First
+* **Baud Rate:** Refer to datasheet and your clock configuration
 * **Clock Polarity (CPOL):** Low (0)
 * **Clock Phase (CPHA):** 2 Edge (1) - Data is sampled on the falling edge of the clock.
-* **Chip Select (NSS/CS):** Software managed. You must control the CS pin manually.
-* **DOUT/MISO Pin:** This pin should be configured as an input with a pull-up resistor. The library checks this pin to
-  see if the TM7711 is ready to send data.
+* **Chip Select (NSS/CS):** Software managed.
+* 
+
+**DMA Configuration:**
+* - **SPIx_RX**: Peripheral to Memory, Data Width: Byte, Memory Increment: Enable
+* - **SPIx_TX**: Memory to Peripheral, Data Width: Byte, Memory Increment: Enable
+* - **Priority**: Medium or High recommended
 
 ## How to Use
 
