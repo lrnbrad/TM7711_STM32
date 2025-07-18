@@ -7,8 +7,7 @@ original [hx710b_non_blocking_f767zi](https://github.com/ufnalski/hx710b_non_blo
 check it out for more details on the original implementation.
 
 This is a driver for the TM7711, a 24-bit analog-to-digital converter, commonly used for weigh scales and pressure
-sensors. This library was originally developed on an STM32L4 using the HAL library, but it is designed to be easily
-portable to other microcontrollers (MCUs) like ESP32, Arduino, or PIC.
+sensors. This library was originally developed on an STM32L4 using the HAL library.
 
 The driver utilizes SPI communication and is optimized for DMA usage to minimize CPU load, making it suitable for
 real-time applications.
